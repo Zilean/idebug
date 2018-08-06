@@ -1,11 +1,21 @@
-'use strict';
+/*!
+ * idebug v0.0.1
+ * (c) 2018 Weich
+ * Released under the MIT License.
+ */
+var result = (function (jQuery) {
+    'use strict';
 
-var version = "0.0.1";
+    jQuery = jQuery && jQuery.hasOwnProperty('default') ? jQuery['default'] : jQuery;
 
-// src/main.js
+    // src/main.js
 
-var main$1 = (function () {
-  console.log('version：' + version);
-});
+    var main = (function () {
+        console.log(jQuery);
+        console.log('version：0.0.1');
+    });
 
-module.exports = main$1;
+    return main;
+
+}(jQuery));
+/* idebug version 0.0.1 */

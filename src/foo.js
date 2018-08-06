@@ -1,7 +1,7 @@
-export function foo1() {
+exports.foo1 = function() {
     console.log('function foo1')
 }
 
-export function foo2() {
+exports.foo2 = function() {
     console.log('function foo2')
 }

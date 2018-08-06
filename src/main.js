@@ -1,6 +1,7 @@
 // src/main.js
-import { version } from '../package.json';
+import jQuery from 'jquery'
 
 export default () => {
-  console.log('version：' + version);
+    console.log(jQuery)
+    console.log('version：__VERSION__' )
 }
