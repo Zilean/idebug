@@ -70,26 +70,26 @@ const prodPlugins = [
 
 const plugins = [...basePlugins].concat(isProd ? prodPlugins : devPlugins);
 
-export default {
-    input: 'src/main.js',
-    output: {
-        banner: banner,
-        footer: '/* idebug version ' + VERSION + ' */',
-        file: isProd ? 'dist/bundle.min.js' : 'dist/bundle.js',
-        name: 'result',
-        format: 'iife',
-        globals: {
-            jquery: 'jQuery'
-        },
-        paths: {
-            jquery: 'https://cdn.bootcss.com/jquery/3.2.1/jquery.js'
-        },
-        sourcemap: isProd ? true : false
-    },
-    plugins,
-    external: ['jquery']
-};
+export default 
 
-function genConfig() {
-    
+function genConfig(file, format, sourcemap) {
+    const config = {
+        input: 'src/main.js',
+        output: {
+            banner: banner,
+            footer: '/* idebug version ' + VERSION + ' */',
+            file: isProd ? 'dist/bundle.min.js' : 'dist/bundle.js',
+            name: 'result',
+            format: 'iife',
+            globals: {
+                jquery: 'jQuery'
+            },
+            paths: {
+                jquery: 'https://cdn.bootcss.com/jquery/3.2.1/jquery.js'
+            },
+            sourcemap: isProd ? true : false
+        },
+        plugins,
+        external: ['jquery']
+    };
 }
