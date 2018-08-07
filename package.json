@@ -2,11 +2,23 @@
   "name": "idebug",
   "version": "0.0.1",
   "description": "A lightweight, extendable front-end developer tool for mobile web page.",
-  "main": "index.js",
+  "main": "dist/idebug.js",
   "scripts": {
-    "dev": "rollup --config scripts/rollup.config.js -w --environment NODE_ENV:development",
-    "build:prod": "rollup --config scripts/rollup.config.js --environment NODE_ENV:production",
+    "dev": "rollup -w -c scripts/config.js --environment TARGET:web-idebug-umd-dev",
+    "dev:cjs": "rollup -w -c scripts/config.js --environment TARGET:web-idebug-cjs",
+    "dev:esm": "rollup -w -c scripts/config.js --environment TARGET:web-idebug-esm",
+    "lint": "eslint --fix src scripts",
     "build": "node scripts/build.js"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verify-commit-msg.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
