@@ -2,5 +2,5 @@
 
 export default () => {
 	console.log('version：__VERSION__');
-	console.log('12345');
+	console.log('ss');
 };
