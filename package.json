@@ -1,6 +1,6 @@
 {
   "name": "idebug",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A lightweight, extendable front-end developer tool for mobile web page.",
   "main": "dist/idebug.cjs.js",
   "scripts": {
