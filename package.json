@@ -8,7 +8,8 @@
     "dev:cjs": "rollup -w -c scripts/config.js --environment TARGET:web-idebug-cjs",
     "dev:esm": "rollup -w -c scripts/config.js --environment TARGET:web-idebug-esm",
     "lint": "eslint --fix src scripts",
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js",
+    "commit": "git-cz"
   },
   "gitHooks": {
     "pre-commit": "lint-staged",
