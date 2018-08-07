@@ -2,7 +2,7 @@
   "name": "idebug",
   "version": "0.0.1",
   "description": "A lightweight, extendable front-end developer tool for mobile web page.",
-  "main": "dist/idebug.js",
+  "main": "dist/idebug.cjs.js",
   "scripts": {
     "dev": "rollup -w -c scripts/config.js --environment TARGET:web-idebug-umd-dev",
     "dev:cjs": "rollup -w -c scripts/config.js --environment TARGET:web-idebug-cjs",
