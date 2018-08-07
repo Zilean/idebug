@@ -1,6 +1,6 @@
 // src/main.js
 
 export default () => {
-	console.log('11');
+	console.log('3343');
 	console.log('version：__VERSION__');
 };
