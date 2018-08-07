@@ -9,7 +9,7 @@
     "dev:esm": "rollup -w -c scripts/config.js --environment TARGET:web-idebug-esm",
     "lint": "eslint --fix src scripts",
     "build": "node scripts/build.js",
-    "precommit": "lint-staged && node scripts/verify-commit-msg.js"
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
